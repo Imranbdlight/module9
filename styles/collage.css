@@ -20,3 +20,35 @@ img{
     grid-template-columns: repeat(2, 1fr);
     gap: 8px;
 }
+.container3{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    grid-template-rows: repeat(3, 200px) 50px 50px;
+}
+.cellbox{
+    background-color: grey;
+}
+#cell-1{
+    grid-row: span 5;
+}
+#cell-11, #cell-12{
+    grid-column: span 3;
+}
+/* responsive media query */
+@media screen and (max-width: 576px) {
+    .row{
+        flex-direction: column;
+        height: auto;
+    }
+    .box-collage{
+        grid-template-columns: 1fr;
+    }
+}
+/* medium devices */
+@media screen  and (min-width: 576px) and (max-width: 992px) {
+    .row{
+        flex-direction: column;
+        height: auto;
+    }    
+}
